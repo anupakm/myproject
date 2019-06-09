@@ -5,6 +5,9 @@ environment {
     registry = "anupakm/myproject"
     registryCredential = 'dockerhub'
 }
+tools {
+	myDocker
+	}
     stages {
         stage('Test') {
             steps {
