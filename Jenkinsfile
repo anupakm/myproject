@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'date; whoami; echo "This is pipeline test stage" ; echo " Custom Var=$myCustomEnvVar"'
+                sh 'date; echo "This is pipeline test stage" ; echo " Custom Var=$myCustomEnvVar"'
             }
         }
     }
