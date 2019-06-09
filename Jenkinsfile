@@ -16,9 +16,10 @@ environment {
 		steps {
 			script {
         		def dockerHome = tool 'myDocker'
-        		env.PATH = "${dockerHome}/bin:${env.PATH}"
-			sh 'echo "This is path ${env.PATH}"'
-			def customImage = docker.build("my-image:${env.BUILD_ID}")
+			sh 'echo "DockerHome is = $dockerHome"'
+ #       		env.PATH = "${dockerHome}/bin:${env.PATH}"
+#			sh 'echo "This is path $PATH"'
+#			def customImage = docker.build("my-image:${env.BUILD_ID}")
     			}
 		}
 	}	
