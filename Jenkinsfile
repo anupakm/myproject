@@ -1,5 +1,10 @@
 pipeline {
     agent { dockerfile true }
+
+environment {
+    registry = "anupakm/myproject"
+    registryCredential = 'dockerhub'
+}
     stages {
         stage('Test') {
             steps {
