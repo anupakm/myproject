@@ -1,12 +1,15 @@
 pipeline {
     agent {
-        docker { image 'node:ubuntu' }
+        docker { image 'ubuntu' }
     }
     stages {
         stage('Test') {
             steps {
-                sh 'node --version'
+		echo " hello "
+	def customImage = docker.build("my-image:${env.BUILD_ID}")
+    customImage.push()	
             }
+
         }
     }
 }
